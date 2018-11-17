@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailsService } from '../../services/details.service';
 
 
 
@@ -9,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsMainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private detailsService: DetailsService) { }
 
   ngOnInit() {
-  }
+    this.detailsService.Value = 23;
+    this.valueToDisplay = this.detailsService.Value;
+   }
+   private valueToDisplay: number = 0;
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailsService } from '../../services/details.service';
 
 @Component({
   selector: 'app-details-specifics',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsSpecificsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private detailsService: DetailsService) { }
 
   ngOnInit() {
+    debugger;
+    this.detailsService.Increment();
   }
 
 }
