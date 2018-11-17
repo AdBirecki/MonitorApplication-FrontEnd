@@ -4,11 +4,14 @@ import { DetailsMainComponent } from './details/details-main/details-main.compon
 import { DetailsOptionsComponent } from './details/details-options/details-options.component';
 import { DetailsSpecificsComponent } from './details/details-specifics/details-specifics.component';
 import { DetailsService } from './services/details.service';
+import { DetailsRoutingModule } from './details-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    DetailsRoutingModule
   ],
+  exports:[DetailsRoutingModule],
   providers: [DetailsService],
   declarations: [
     DetailsMainComponent, 
